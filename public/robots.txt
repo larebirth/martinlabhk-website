@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://martinlabhk.com/sitemap-index.xml

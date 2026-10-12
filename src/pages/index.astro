@@ -1,50 +1,87 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const pageTitle = 'Martin Lab HK｜AI Solution Consultant · AI 工作流程與系統整合';
+const description = 'Martin Lab HK 專注將 AI 從概念轉化成真正可用的工作流程、AI Agent、知識庫與 Web Apps，為個人、團隊與組織建立務實的數碼方案。';
 ---
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="zh-Hant-HK">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1224" />
+  <meta name="description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Martin Lab HK" />
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content="https://martinlabhk.com/" />
+  <link rel="canonical" href="https://martinlabhk.com/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>{pageTitle}</title>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#top" aria-label="Martin Lab HK 首頁"><span class="logo-icon">M<span class="logo-dot">.</span></span><span class="logo-word">MARTIN<span>LAB</span><small>HK</small></span></a>
+      <nav class="desktop-nav" aria-label="主要導覽">
+        <a href="#about">關於我</a><a href="#services">專業服務</a><a href="#work">作品案例</a><a href="#process">合作流程</a>
+      </nav>
+      <a class="nav-cta" href="#contact">聯絡合作 <span>↗</span></a>
+      <button class="menu-toggle" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="mobile-nav">☰</button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="手機導覽" hidden><a href="#about">關於我</a><a href="#services">專業服務</a><a href="#work">作品案例</a><a href="#process">合作流程</a><a href="#contact">聯絡合作</a></nav>
+  </header>
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> PERSONAL BRAND <span class="eyebrow-sep">/</span> AI SOLUTION CONSULTANT</div>
+        <div class="small-intro">你好，我係 Martin。</div>
+        <h1 id="hero-title">將 AI 從概念，<br/>變成<span class="highlight">真正用得著</span><br/>嘅方案<span class="punct">.</span></h1>
+        <p class="hero-description">結合業務流程、實務經驗同科技整合，幫個人、團隊同組織建立真正落到地嘅 AI 工作流程、智能工具與 Web Apps。</p>
+        <div class="hero-actions"><a class="primary-btn" href="#work">探索實際項目 <span>↗</span></a><a class="secondary-btn" href="#about">了解 Martin <span>↓</span></a></div>
+        <div class="hero-under"><span class="mini-line"></span><span>HONG KONG BASED</span><span class="bullet">•</span><span>AI × WORKFLOW × SOLUTIONS</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-glow" aria-hidden="true"></div>
+        <div class="portrait-frame">
+          <div class="portrait-grid" aria-hidden="true"></div>
+          <div class="portrait-rim" aria-hidden="true"></div>
+          <div class="portrait-preview" aria-label="此位置待加入 Martin 本人專業形象照">
+            <svg viewBox="0 0 360 500" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#62718a"/><stop offset="1" stop-color="#263452"/></linearGradient></defs><circle cx="180" cy="165" r="79" fill="url(#g)" opacity=".68"/><path d="M35 485c7-113 62-181 145-181s138 68 145 181" fill="url(#g)" opacity=".68"/><path d="M180 315l-43 38 43 89 43-89z" fill="#101c37" opacity=".8"/></svg>
+            <span class="portrait-placeholder"><span>PORTRAIT / 01</span>專業形象照位置</span>
+          </div>
+          <div class="portrait-stamp"><span>BUILT FOR</span><strong>REAL<br/>IMPACT.</strong></div>
+        </div>
+        <div class="floating-tag"><span class="signal"></span><span><strong>AI + HUMAN INSIGHT</strong><small>Technology with practical purpose</small></span></div>
+        <div class="hero-side-text">MARTIN LAB / 2026</div>
+      </div>
+    </section>
+    <div class="divider-band"><div class="wrap skill-strip"><span>AI CONSULTING</span><i></i><span>WORKFLOW AUTOMATION</span><i></i><span>KNOWLEDGE SYSTEMS</span><i></i><span>WEB APPLICATIONS</span></div></div>
+    <section class="section wrap about" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><span class="kicker">01 / ABOUT MARTIN</span><h2 id="about-title">科技唔應該複雜。<br/><span>真正重要係解決問題。</span></h2></div>
+      <div class="about-layout"><div class="about-abstract"><span class="big-monogram">M<span>.</span></span><div class="abstract-lines"></div><span class="abstract-caption">PRACTICAL THINKING<br/>MEETS NEW TECHNOLOGY</span></div><div class="about-text"><p>我相信最好嘅 AI 方案，唔係用最多模型或者最複雜嘅架構，而係準確理解需要，再揀最適合嘅技術。</p><p>Martin Lab HK 以個人專業品牌出發，結合現場運作、業務流程分析同 AI 系統整合，將想法變成可以測試、操作同持續改善嘅工具。</p><div class="principles"><div><span>01</span><strong>先理解問題</strong><small>Problem first</small></div><div><span>02</span><strong>揀合適技術</strong><small>Right-sized tech</small></div><div><span>03</span><strong>交付可用成果</strong><small>Real-world delivery</small></div></div></div></div>
+    </section>
+    <section class="section services-bg" id="services" aria-labelledby="services-title"><div class="wrap"><div class="section-heading heading-row"><div><span class="kicker">02 / WHAT I DO</span><h2 id="services-title">由需求出發，<br/><span>設計真正適用嘅解決方案。</span></h2></div><p>唔係為 AI 而 AI，而係用最合適嘅工具簡化流程、節省時間同提升工作效率。</p></div><div class="service-grid"><article class="service-card"><span class="service-icon">↗</span><div class="card-num">01</div><h3>AI Workflow & Automation</h3><p>梳理重複工作流程，設計由資料輸入、處理到輸出嘅自動化方案。</p><span class="card-bottom">工作流程 / 自動化</span></article><article class="service-card"><span class="service-icon">⌘</span><div class="card-num">02</div><h3>AI Agent & Knowledge Systems</h3><p>以 AI Agent、RAG 同知識管理系統，令資訊變得容易查找同實際應用。</p><span class="card-bottom">Agent / RAG / 知識庫</span></article><article class="service-card"><span class="service-icon">◈</span><div class="card-num">03</div><h3>Web Apps & Integration</h3><p>將 AI 能力整合成簡單易用嘅 Web App，連接既有工具、API 同資料。</p><span class="card-bottom">Web Apps / API / 系統整合</span></article></div></div></section>
+    <section class="section wrap" id="work" aria-labelledby="work-title"><div class="section-heading heading-row"><div><span class="kicker">03 / SELECTED WORK</span><h2 id="work-title">唔止講 AI，<br/><span>用項目展示實際可能。</span></h2></div><p>以下為個人研發、示範或規劃項目。公開狀態將按實際進度更新。</p></div><div class="work-grid"><article class="work-card featured"><div class="work-art work-art-ai"><span class="art-tag">KNOWLEDGE + AI</span><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><span class="art-center">AI<span>↗</span></span></div><div class="work-text"><div class="work-line"><span>智能知識系統</span><span class="status">示範開發</span></div><h3>AI Licensing Knowledge Advisor</h3><p>結合文件檢索同 AI，研究如何令複雜規章資訊更容易查詢與理解。非官方服務。</p><span class="tags">RAG · Knowledge Base · Web Demo</span></div></article><article class="work-card"><div class="work-art work-art-beauty"><span class="art-tag">DIRECTORY PLATFORM</span><span class="art-shape b-one"></span><span class="art-shape b-two"></span><span class="art-center mono">BC<span>●</span></span></div><div class="work-text"><div class="work-line"><span>行業資訊平台</span><span class="status">開發中</span></div><h3>Beauty Connect HK</h3><p>以資訊架構、資料庫及 AI 工作流程，探索美業資訊平台嘅實際應用。</p><span class="tags">Data · Directory · Platform</span></div></article><article class="work-card"><div class="work-art work-art-messaging"><span class="art-tag">BUSINESS MESSAGING</span><div class="bubble b1">HELLO</div><div class="bubble b2">AI ASSIST</div><div class="bubble b3">↗</div></div><div class="work-text"><div class="work-line"><span>商業通訊工具</span><span class="status">方案規劃</span></div><h3>Messaging & Campaign Tools</h3><p>針對中小企通訊、訊息跟進與行銷流程嘅輕量化產品方向。</p><span class="tags">Messaging · Workflow · SaaS</span></div></article></div></section>
+    <section class="section process-bg" id="process" aria-labelledby="process-title"><div class="wrap process-layout"><div class="section-heading"><span class="kicker">04 / HOW WE WORK</span><h2 id="process-title">由一個問題開始。<br/><span>逐步變成一個方案。</span></h2><p>避免一開始就建立過大系統，先驗證，再逐步擴展。</p></div><div class="steps"><div class="step"><span>01</span><div><strong>了解現有流程</strong><p>了解使用情境、真正痛點同資料限制。</p></div><span class="step-arrow">↗</span></div><div class="step"><span>02</span><div><strong>設計最合適方案</strong><p>選擇 AI、Automation、RAG 或 Web App 組合。</p></div><span class="step-arrow">↗</span></div><div class="step"><span>03</span><div><strong>建立 Prototype</strong><p>先做可檢視、可試用嘅版本，收集反饋。</p></div><span class="step-arrow">↗</span></div><div class="step"><span>04</span><div><strong>測試、交付及改善</strong><p>確認操作、維護及日後擴展方向。</p></div><span class="step-arrow">↗</span></div></div></div></section>
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-title"><span class="kicker">05 / LET'S CONNECT</span><div class="contact-box"><span class="contact-glow"></span><div class="contact-copy"><span class="contact-eyebrow">YOUR NEXT IDEA STARTS HERE</span><h2 id="contact-title">有個問題想用 AI 解決？<br/><span>不如傾下。</span></h2><p>無論係個人效率、團隊流程，定係一個新嘅 AI 產品構思，都可以由一次交流開始。</p><div class="contact-note">聯絡方式及預約連結待確認，上線前設定。</div></div><div class="contact-symbol">↗</div></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><a class="logo footer-logo" href="#top"><span class="logo-icon">M<span class="logo-dot">.</span></span><span class="logo-word">MARTIN<span>LAB</span><small>HK</small></span></a><span>AI · INTEGRATION · SOLUTIONS</span><span>© 2026 Martin Lab HK. All rights reserved.</span></div></footer>
+  <script is:inline>
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileNav = document.querySelector('#mobile-nav');
+    toggle?.addEventListener('click', () => {
+      const opening = mobileNav.hasAttribute('hidden');
+      mobileNav.toggleAttribute('hidden', !opening);
+      toggle.setAttribute('aria-expanded', String(opening));
+      toggle.setAttribute('aria-label', opening ? '關閉導覽選單' : '開啟導覽選單');
+    });
+    mobileNav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileNav.setAttribute('hidden', '');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
 </html>

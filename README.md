@@ -1,64 +1,36 @@
-# Astro Starter Kit: Blog
+# Martin Lab HK — Landing Page V0.1
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+Official personal-brand landing page for **martinlabhk.com**. Hong Kong Traditional Chinese, professional instructor and AI / IT Solution Consultant positioning.
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+## Design
 
-<!-- dash-content-start -->
+Six sections within one page: Hero, About, Services, Portfolio, Process and Contact. Navy/purple technology theme. Real portrait and real contact details are still pending; placeholder is intentionally visible rather than inventing personal information. Portfolio statuses explicitly distinguish demos, in-progress work and planning. Licensing Knowledge Advisor is identified as a non-official demo.
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+## Hosting
 
-Features:
+This repository was created through the **Cloudflare Workers Astro starter** and is connected to the existing Worker `martinlabhk-website`. Do NOT create another Pages project. The build and deployment should run through Workers Builds using existing Astro 5 package-lock:
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-- ✅ Built-in Observability logging
+- Production branch: `main`
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+- Asset binding: `ASSETS`
+- Cloudflare Worker configuration: `wrangler.json`
+- Cloudflare custom domain: `martinlabhk.com`
+- workers.dev: enabled for fallback testing
 
-<!-- dash-content-end -->
-
-## Getting Started
-
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+## Local checks
 
 ```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
+npm ci
+npm run build
+npm run preview
 ```
 
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
+## Pre-launch / next iteration
 
-## 🚀 Project Structure
+- Replace the silhouette with Martin's own approved headshot.
+- Add verified contact details and genuine booking links.
+- Confirm that the public portfolio descriptions match permissions and project status.
+- Test production deployment URL, SSL, domain, responsive layout, and links.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
-| `npm wrangler tail`               | View real-time logs for all Workers              |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Existing VPS apps and subdomain DNS records must not be altered when updating this landing page.
